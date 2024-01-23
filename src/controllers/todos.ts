@@ -19,3 +19,14 @@ export const createTodo = (req: Request,res: Response, next:NextFunction) => {
     }
 
 }
+
+
+export const getTodos = (req: Request, res: Response, next: NextFunction) => {
+    try{
+        res.status(201).json({
+            tasks: todos
+        })
+    } catch(error) {
+        console.log(error)
+    }
+}
